@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Результат генерации</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div class="container">
+  <h1>📝 Результат</h1>
+  {% if user %}
+    <p>👤 {{ user.email }} | <a href="/logout">Выйти</a></p>
+  {% endif %}
+  <pre>{{ result }}</pre>
+  <br>
+  {% if pdf_link %}
+    <a href="{{ pdf_link }}" download>📄 Скачать PDF</a><br>
+  {% endif %}
+  {% if md_link %}
+    <a href="{{ md_link }}" download>📝 Скачать Markdown</a><br>
+  {% endif %}
+  <br>
+  <a href="/">← Назад</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+
+body {
+  font-family: sans-serif;
+  background: #f9f9f9;
+  padding: 30px;
+}
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+input, select, button {
+  margin-top: 10px;
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+}
+button {
+  background: #7f56d9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+a {
+  display: inline-block;
+  margin-top: 20px;
+  color: #7f56d9;
+  text-decoration: none;
+}
+.result, .transcript {
+  text-align: left;
+  margin-top: 20px;
+  white-space: pre-wrap;
+}

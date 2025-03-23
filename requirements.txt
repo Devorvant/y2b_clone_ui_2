@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+jinja2
+python-dotenv
+authlib
+sqlalchemy
+aiofiles
+python-multipart
+itsdangerous
+youtube-transcript-api
+openai
+
+fpdf

@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Y2B Generator</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div class="container">
+  <h1>🎥 Y2B Generator</h1>
+  {% if user %}
+    <p>👤 {{ user.email }} | <a href="/logout">Выйти</a></p>
+    <form method="post" action="/generate">
+      <input type="text" name="url" placeholder="Ссылка на видео" required><br>
+
+      <select name="style">
+        <option value="blog">📰 Статья</option>
+        <option value="motivation">💪 Мотивация</option>
+        <option value="story">📖 История</option>
+        <option value="humor">😂 Юмор</option>
+        <option value="transcript">🎬 Только транскрипт</option>
+      </select><br>
+
+      <select name="language">
+        <option value="русском">🇷🇺 Русский</option>
+        <option value="английском">🇺🇸 English</option>
+        <option value="испанском">🇪🇸 Español</option>
+        <option value="немецком">🇩🇪 Deutsch</option>
+        <option value="французском">🇫🇷 Français</option>
+      </select><br>
+
+      <label><input type="checkbox" name="export_pdf"> 📄 Экспорт в PDF</label><br>
+      <label><input type="checkbox" name="export_md"> 📝 Экспорт в Markdown</label><br>
+
+      <button type="submit">Сгенерировать</button>
+    </form>
+    <br>
+    <a href="/history.txt" target="_blank">📚 История генераций</a>
+  {% else %}
+    <a class="button" href="/login">🔐 Войти через Google</a>
+  {% endif %}
+</div>
+</body>
+</html>
