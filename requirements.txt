@@ -9,4 +9,3 @@ python-multipart
 itsdangerous
 youtube-transcript-api
 openai
-fpdf
