@@ -31,6 +31,7 @@ oauth.register(
     api_base_url='https://www.googleapis.com/oauth2/v2/',
     userinfo_endpoint='https://openidconnect.googleapis.com/v1/userinfo',
     client_kwargs={"scope": "email profile"}  # ✅ Без "openid"
+    redirect_uri=os.getenv("AUTH_REDIRECT_URI")  # ✅ Эту строчку добавь
 )
 
 
