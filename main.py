@@ -58,7 +58,7 @@ def home(request: Request):
 
 @app.get("/login")
 async def login(request: Request):
-    redirect_uri = "http://localhost:8000/auth"
+    redirect_uri = os.getenv("AUTH_REDIRECT_URI")  # ✅ Работает и локально, и на Railway
     return await oauth.google.authorize_redirect(request, redirect_uri)
 
 @app.get("/auth")
